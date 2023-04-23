@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        const btnText = 'Display Text'
+    </script>
+</head>
+<body>
+    <div style="display: flex; flex-direction: row; align-items: center;">
+        <img src="static/logo.jpg" style="height: 50px;">
+        <h1>My first page</h1>
+
+
+        <input type="text" id="textInput" oninput="console.log(this.value)">
+        <button onclick="displayText()" onmouseenter="this.innerText='Hey'" onmouseleave="this.innerText=btnText">Display Text</button>
+        <div id="output"></div>
+
+        <script>
+            function displayText() {
+                const textInput = document.getElementById("textInput");
+                const output = document.getElementById("output");
+                output.innerText = textInput.value;
+            }
+        </script>
+        
+    </div>
+</body>
+</html>

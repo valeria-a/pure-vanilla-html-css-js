@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function changeHandler(event) {
+            console.log('aaaaaaa')
+            console.log(event.target)
+        }
+
+        const handleSubmit = () => {
+            console.log('blabla')
+            const userInput = document.getElementsByTagName('input')[0].value
+            document.getElementById('chars-num').innerText = `Chars num: ${userInput.length}`
+        }
+
+        const handleSubmitForm = (event) => {
+            console.log('Form submitted')
+
+            event.preventDefault()
+            console.log('after prevent default')
+
+            console.log(event.target)
+
+            event.target.reset()
+        }
+        
+    </script>
+</head>
+
+
+
+<body>
+    <!-- <label for="username">Username</label>
+    <input id="username" type="text" 
+        oninput="console.log('oninput', this.value)" 
+        onchange="changeHandler(event)"
+        placeholder="Enter your username">
+    <button onclick="handleSubmit()">Submit</button>
+    <p id="chars-num"></p> -->
+    <!-- <p>Chars num: <span id="chars-num"></span></p> -->
+    <!-- <input type="file">
+    <input type="date">
+    <input type="password">
+    <input type="checkbox"> -->
+
+    <form onsubmit="handleSubmitForm(event)">
+        <label for="fname-id">First name:</label><br>
+        <input type="text" id="fname-id" name="fname" required minlength="3"><br>
+        <label for="lname-id">Last name:</label><br>
+        <input type="text" id="lname-id" name="lname" required ><br>
+        <label for="email-id">Email:</label><br>
+        <input type="email" id="email-id" name="email" required>
+        <button type="submit">Submit</button>
+        <input type="number" id="age-id" name="age" min="18">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    
+</body>
+</html>

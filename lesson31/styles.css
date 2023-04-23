@@ -1,0 +1,12 @@
+input-text {
+    display: block;
+    margin-top: 1em;
+}
+
+input-text:valid {
+    border: 1px solid green;
+}
+
+input-text:invalid {
+    border: 1px solid red;
+}
