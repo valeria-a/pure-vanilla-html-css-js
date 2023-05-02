@@ -12,42 +12,46 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        
+
+    
 
         <script>
 
-            function name(params) {
-                
+            // XHR - XML Http Request
+
+            function getData() {
+                fetch("https://api.kanye.rest1")
+                    .then((response) => {
+                        console.log(response)
+                        return response.json()
+                    })
+                    .then((json) => {
+                        document.getElementById('q').innerHTML=json.quote
+                        console.log("received response")
+                    })
+                    .catch((error) => {
+                        // console.error(error)
+                        document.getElementById('q').innerHTML = "Error occurred"
+                        document.getElementById('q').style.color = 'red'
+                    })
+                // console.log("sent request")
             }
-
-
-            // function getData() {
-            //     fetch("https://api.kanye.rest")
-            //         .then((response) => response.json())
-            //         .then((json) => {
+            // .then((json) => {
             //             document.getElementById('q').innerHTML=json.quote
             //             console.log("received response")
             //         })
-            //         .catch((error) => {
-            //             console.error(error)
-            //             document.getElementById('q').innerHTML = "Error occurred"
-            //             document.getElementById('q').style.color = 'red'
-            //         })
+            // async function getData() {
+            //     setTimeout(()=>console.log('ggg'), 50)
+            //     setTimeout(()=>console.log('ggg'), 50)
+            //     console.log('before request')
+            //     response = await fetch("https://api.kanye.rest")
+            //     // execution suspended
+            //     console.log('after response')
+            //     if (response) {
+            //         console.log('inside if', response)
+            //     }
             //     console.log("sent request")
             // }
-
-            async function getData() {
-                setTimeout(()=>console.log('ggg'), 50)
-                setTimeout(()=>console.log('ggg'), 50)
-                console.log('before request')
-                response = await fetch("https://api.kanye.rest")
-                // execution suspended
-                console.log('after response')
-                if (response) {
-                    console.log('inside if', response)
-                }
-                console.log("sent request")
-            }
         </script>
 
     </head>

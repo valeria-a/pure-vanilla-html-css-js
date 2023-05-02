@@ -1,3 +1,7 @@
+function handleDelete(event) {
+    console.log('handleDelete', event.target)
+}
+
 function formSubmitHandler(event) {
             
     event.preventDefault();
@@ -97,11 +101,11 @@ function formSubmitHandler(event) {
             mainSection.removeChild(sectionHeader)
         }
     })
+
     const deleteIcon = document.createElement('i')
     deleteIcon.setAttribute('class', 'fa-solid fa-trash')
     hstack.appendChild(deleteButton)
     deleteButton.appendChild(deleteIcon)
-
 
     event.target.reset()
 }

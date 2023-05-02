@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
     <script>
-        console.log("first")
+        const intervalId = setInterval(() => {
+            console.log(new Date())
+        }, 3000)
+        console.log(`Interval id: ${intervalId}`)
+
+        console.log("Setting timeout")
         setTimeout(() => {
-            console.log("second")
-        }, 2000)
-        console.log("third")
+            clearInterval(intervalId)
+            console.log('cleared interval', intervalId)
+        }, 20000)
+        
+        console.log('finished code')
+
+
     </script>
 </head>
 <body>
