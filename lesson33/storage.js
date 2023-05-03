@@ -1,9 +1,14 @@
-const testLocal = () => {
+
+// localStorage.setItem('name', 'valeria')
+// sessionStorage.setItem('day', 'wed')
+// console.log(localStorage.getItem('name'))
+
+// const testLocal = () => {
     
-}
+// }
 
 const testCookie = () => {
-    document.cookie = "name=valeria"
+    document.cookie = "name=valeria; expires=2024-01-01T19:00:00; secure"
 }
 
 testCookie()
