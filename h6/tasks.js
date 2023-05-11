@@ -10,7 +10,7 @@ const handleTaskSubmit = (event) => {
 
     const tasksList = document.getElementById('tasks')
 
-    const newTask = document.createElement('div')
+    const newTask = document.createElement('li')
     newTask.setAttribute('class', 'form-check mb-3')
 
     const taskChk = document.createElement('input')
@@ -23,16 +23,15 @@ const handleTaskSubmit = (event) => {
         if (result) {
             newTask.remove()
         } else {
-            console.log('ddd')
             taskChk.checked = false
         }
-        console.log(taskChk.checked)
     }
 
     const taskLbl = document.createElement('label')
     taskLbl.setAttribute('class', 'form-check-label')
     taskChk.setAttribute('for', 'task-chkbox-id')
     taskLbl.innerText = `(${data.complete_by}) - ${data.title}`
+    // taskLbl.innerText = "(" + data.complete_by + ") - " + data.title
 
     newTask.appendChild(taskChk)
     newTask.appendChild(taskLbl)
