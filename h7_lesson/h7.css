@@ -53,3 +53,10 @@ h3 {
 .mr-5 {
     margin-right: 5px;
 }
+
+/* media queries */
+@media (max-width: 640px) {
+    .main-div {
+        max-width: 80%;
+    }
+}
