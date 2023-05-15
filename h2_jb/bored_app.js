@@ -6,8 +6,8 @@ const handleSubmit = (event) => {
     event.preventDefault();
 
     // disable elements
-    const btn = document.getElementById('submit-btn-id')
-    btn.setAttribute('disabled', true)
+    const fieldset = document.getElementById('fieldset-id')
+    fieldset.setAttribute('disabled', true)
 
     const formData = new FormData(event.target)
     const data = Object.fromEntries(formData.entries())
@@ -30,12 +30,12 @@ const handleSubmit = (event) => {
             }
 
             document.getElementById('activity').innerText = jsonData.activity
-            btn.removeAttribute('disabled')
+            fieldset.removeAttribute('disabled')
         })
         .catch((error) => {
             console.error(error)
             document.getElementById('activity').innerText = 'Error'
-            btn.removeAttribute('disabled')
+            fieldset.removeAttribute('disabled')
         })
 
 }

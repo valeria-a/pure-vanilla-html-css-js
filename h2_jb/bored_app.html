@@ -29,27 +29,32 @@
 
         <form onsubmit="handleSubmit(event)">
 
-            <label for="activity-type">Choose activity type:</label>
-            <select class="form-control" name="activity_type" id="activity-type">
-              <option value="education">Education</option>
-              <option value="recreational">Recreational</option>
-              <option value="social">Social</option>
-              <option value="diy">DIY</option>
-              <option value="charity">Charity</option>
-              <option value="cooking">Cooking</option>
-              <option value="relaxation">Relaxation</option>
-              <option value="music">Music</option>
-              <option value="busywork">Busywork</option>
-            </select>
+            <fieldset id="fieldset-id">
 
-            <br>
+                <label for="activity-type">Choose activity type:</label>
+                <select class="form-control" name="activity_type" id="activity-type">
+                <option value="education">Education</option>
+                <option value="recreational">Recreational</option>
+                <option value="social">Social</option>
+                <option value="diy">DIY</option>
+                <option value="charity">Charity</option>
+                <option value="cooking">Cooking</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="music">Music</option>
+                <option value="busywork">Busywork</option>
+                </select>
 
-            <button
-                id="submit-btn-id"
-                class="btn btn-outline-primary" 
-                type="submit">
-                SEARCH ACTIVITY
-            </button>
+                <br>
+
+                <button
+                    id="submit-btn-id"
+                    class="btn btn-outline-primary" 
+                    type="submit">
+                    SEARCH ACTIVITY
+                </button>
+
+            </fieldset>
+
 
 
         </form>
