@@ -1,0 +1,60 @@
+div, li, ul {
+    display: flex;
+}
+
+p, h1, h2, h3, h4, h5 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    margin: 0px;
+}
+
+h3 {
+    color: #327fe3;
+}
+
+ul, li {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: column;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.main-div {
+    flex-direction: column;
+    margin: auto;
+    width: 45%;
+}
+
+.movie-card {
+    flex-direction: row;
+    border-radius: 5px;
+    border: 1px solid #327fe3;
+    padding: 5px;
+    margin: 10px 0px;
+}
+
+.movie-details {
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 5px;
+}
+
+.movie-rating {
+    flex-direction: column;
+}  
+
+@media (max-width: 768px) {
+    .main-div {
+      width: 80%;
+    }
+  }
