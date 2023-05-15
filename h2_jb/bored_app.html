@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bored App</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="bored_app.css" />
+    <script src="bored_app.js"></script>
+
+    <script src="https://kit.fontawesome.com/a99857eddc.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fa-brands fa-creative-commons-remix fa-spin fa-lg" style="color: #0d6efd;"></i>
+                Bored App
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <form onsubmit="handleSubmit(event)">
+
+            <label for="activity-type">Choose activity type:</label>
+            <select name="activity_type" id="activity-type">
+              <option value="education">Education</option>
+              <option value="recreational">Recreational</option>
+              <option value="social">Social</option>
+              <option value="diy">DIY</option>
+              <option value="charity">Charity</option>
+              <option value="cooking">Cooking</option>
+              <option value="relaxation">Relaxation</option>
+              <option value="music">Music</option>
+              <option value="busywork">Busywork</option>
+            </select>
+
+            <br>
+
+            <button 
+                class="btn btn-outline-primary" 
+                type="submit">
+                SEARCH ACTIVITY
+            </button>
+
+
+        </form>
+
+    </div>
+
+    
+</body>
+</html>
