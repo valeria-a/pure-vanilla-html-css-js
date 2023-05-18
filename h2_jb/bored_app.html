@@ -32,7 +32,7 @@
             <fieldset id="fieldset-id">
 
                 <label for="activity-type">Choose activity type:</label>
-                <select class="form-control" name="activity_type" id="activity-type">
+                <select class="form-control" name="type" id="activity-type">
                 <option value="education">Education</option>
                 <option value="recreational">Recreational</option>
                 <option value="social">Social</option>
@@ -44,6 +44,18 @@
                 <option value="busywork">Busywork</option>
                 </select>
 
+                <br>
+
+                <input 
+                    class="form-check-input" 
+                    type="checkbox" 
+                    id="free-chk-id" 
+                    name="price"
+                    value="0.0">
+                <label class="form-check-label" for="free-chk-id">Free</label>
+
+                <br>
+                <br>
                 <br>
 
                 <button
