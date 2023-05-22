@@ -16,4 +16,16 @@ const getDog = async (event) => {
     const img = document.getElementById('dog-img')
     img.setAttribute('src', dogUrl)
     img.hidden = false
+
+    localStorage.setItem('dogUrl', dogUrl)
+}
+
+const onImgLoaded = () => {
+    console.log('inside onImgLoaded')
+    const url = localStorage.getItem('dogUrl')
+    if (url) {
+        const img = document.getElementById('dog-img')
+        img.setAttribute('src', url)
+        img.hidden = false
+    }
 }

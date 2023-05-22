@@ -1,3 +1,5 @@
 https://api.quotable.io/random
+https://api.chucknorris.io/jokes/random
+https://api.kanye.rest
 https://random.dog/woof.json
 https://api.nasa.gov/planetary/apod?api_key=<your key>
